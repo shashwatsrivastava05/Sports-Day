@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+	<title>Annual Sports Day 2026</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"/>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"/>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+
+  <style>
+
+   
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+    }
+
+    h1, h2, h3, h4, h5 {
+      font-weight: 700;
+    }
+
+    .section-label {
+      font-size: 14px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #ffc107;
+      font-weight: 600;
+    }
+
+    .section-underline {
+      width: 50px;
+      height: 4px;
+      background-color: #ffc107;
+      margin: 10px auto 20px auto;
+      border-radius: 2px;
+    }
+
+
+    
+    .navbar {
+      background-color: #1a1a2e;
+    }
+
+    .navbar-brand {
+      color: #ffc107 !important;
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    .nav-link {
+      color: #ffffff !important;
+      font-weight: 500;
+    }
+
+    .nav-link:hover {
+      color: #ffc107 !important;
+    }
+
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23ffc107' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    .navbar-toggler {
+      border-color: #ffc107;
+    }
+
+
+   
+
+    .hero-section {
+
+		background:
+        linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+        url('https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=1400&q=80');
+      background-size: cover;      
+      background-position: center;  
+      min-height: 90vh;             
+      display: flex;
+      align-items: center;         
+      color: white;
+    }
+
+    .hero-heading {
+      font-size: 60px;
+      font-weight: 700;
+      line-height: 1.1;
+    }
+
+    .hero-heading span {
+      color: #ffc107;
+    }
+
+    .hero-desc {
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.8);
+      max-width: 500px;
+    }
+
+    .hero-stat {
+      text-align: center;
+      padding: 15px 20px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .hero-stat .num {
+      font-size: 28px;
+      font-weight: 700;
+      color: #ffc107;
+    }
+
+    .hero-stat .lbl {
+      font-size: 12px;
+      color: rgba(255,255,255,0.7);
+    }
+
+
+   
+
+    .events-section {
+      background-color: #f8f9fa;
+    }
+
+    .event-card {
+      border: none;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s;   
+    }
+
+    .event-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .event-card img {
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .event-badge {
+      background-color: #ffc107;
+      color: #333;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .card-info {
+      font-size: 13px;
+      color: #777;
+    }
+
+    .card-info i {
+      color: #ffc107;
+    }
+
+
+    
+    .schedule-section {
+      background-color: #ffffff;
+    }
+
+    .schedule-table thead {
+      background-color: #1a1a2e;
+      color: #ffc107;
+    }
+
+    .schedule-table tbody tr:hover {
+      background-color: #fff8e1;
+    }
+
+    .schedule-table .time-col {
+      font-weight: 600;
+      color: #e67e00;
+    }
+
+
+
+    .gallery-section {
+      background-color: #f8f9fa;
+    }
+
+    .gallery-img-wrap {
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    }
+
+    .gallery-img-wrap img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      transition: transform 0.4s;
+    }
+
+    .gallery-img-wrap:hover img {
+      transform: scale(1.06);
+    }
+
+
+
+    .contact-section {
+      background-color: #1a1a2e;
+      color: white;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      margin-bottom: 25px;
+    }
+
+    .contact-icon {
+      width: 45px;
+      height: 45px;
+      min-width: 45px;
+      background-color: #ffc107;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #333;
+      font-size: 18px;
+    }
+
+    .contact-item h6 {
+      color: #ffc107;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 3px;
+    }
+
+    .contact-item p {
+      margin: 0;
+      color: rgba(255,255,255,0.8);
+      font-size: 15px;
+    }
+
+    /* Input fields inside the dark form */
+    .contact-section .form-control {
+      background-color: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: white;
+      border-radius: 6px;
+      padding: 12px;
+    }
+
+    .contact-section .form-control::placeholder {
+      color: rgba(255,255,255,0.35);
+    }
+
+    .contact-section .form-control:focus {
+      border-color: #ffc107;
+      background-color: rgba(255,255,255,0.1);
+      color: white;
+      box-shadow: 0 0 0 3px rgba(255,193,7,0.2);
+    }
+
+    .contact-section .form-label {
+      color: rgba(255,255,255,0.6);
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+
+   
+
+    footer {
+      background-color: #111;
+      color: rgba(255,255,255,0.6);
+      padding: 40px 0 20px;
+    }
+
+    .footer-logo {
+      font-size: 22px;
+      font-weight: 700;
+      color: #ffc107;
+    }
+
+    .footer-title {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #ffc107;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .footer-links a {
+      display: block;
+      color: rgba(255,255,255,0.55);
+      text-decoration: none;
+      font-size: 14px;
+      margin-bottom: 8px;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: #ffc107;
+    }
+
+    .social-btn {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.2);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 16px;
+      text-decoration: none;
+      margin-right: 8px;
+      transition: background 0.2s, border-color 0.2s;
+    }
+
+    .social-btn:hover {
+      background-color: #ffc107;
+      border-color: #ffc107;
+      color: #333;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      margin-top: 30px;
+      padding-top: 20px;
+      font-size: 13px;
+      text-align: center;
+      color: rgba(255,255,255,0.35);
+    }
+
+
+
+    @media (max-width: 768px) {
+      /* Smaller heading on phones */
+      .hero-heading {
+        font-size: 38px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+
+    <!-- Logo / Site Name -->
+    <a class="navbar-brand" href="#">🏆 Sports Day</a>
+
+    <!-- Hamburger button - only shows on mobile -->
+    <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainMenu"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menu items (collapse on mobile, expand on desktop) -->
+    <div class="collapse navbar-collapse" id="mainMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
+        <li class="nav-item"><a class="nav-link" href="#schedule">Schedule</a></li>
+        <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        <!-- Register button with yellow background -->
+        <li class="nav-item ms-2">
+          <a class="btn btn-warning fw-bold px-4" href="#contact">Register Now</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+<!-- END NAVBAR -->
+
+
+<!-- ================================================
+     SECTION 2: HERO (Main Banner)
+     ================================================ -->
+<section class="hero-section" id="home">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+
+        <!-- Small label above the heading -->
+        <p class="section-label mb-2">📅 08 April 2026 · City Sports Complex</p>
+
+        <!-- Main big heading -->
+        <h1 class="hero-heading">
+          Annual <span>Sports Day</span><br/>2026
+        </h1>
+
+        <!-- Short description -->
+        <p class="hero-desc mt-3">
+          Join us for a day full of thrilling sports, fierce competition,
+          and great memories. Open to all students and sports enthusiasts!
+        </p>
+
+        <!-- Two buttons: primary (yellow) and secondary (outline) -->
+        <div class="mt-4 d-flex flex-wrap gap-3">
+          <a href="#contact" class="btn btn-warning btn-lg fw-bold px-4">Register Now</a>
+          <a href="#events" class="btn btn-outline-light btn-lg px-4">View Events</a>
+        </div>
+
+        <!-- Three stat boxes below the buttons -->
+        <div class="row g-3 mt-4">
+          <div class="col-4 col-sm-3">
+            <div class="hero-stat">
+              <div class="num">4+</div>
+              <div class="lbl">Events</div>
+            </div>
+          </div>
+          <div class="col-4 col-sm-3">
+            <div class="hero-stat">
+              <div class="num">500+</div>
+              <div class="lbl">Athletes</div>
+            </div>
+          </div>
+          <div class="col-4 col-sm-3">
+            <div class="hero-stat">
+              <div class="num">1 Day</div>
+              <div class="lbl">Of Glory</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- END HERO -->
+
+
+<!-- ================================================
+     SECTION 3: EVENTS
+     Using Bootstrap Cards
+     ================================================ -->
+<section class="events-section py-5" id="events">
+  <div class="container">
+
+    <!-- Section heading -->
+    <div class="text-center mb-5">
+      <p class="section-label">Compete & Win</p>
+      <h2>Featured Events</h2>
+      <div class="section-underline"></div>
+      <p class="text-muted">Choose your sport and register before spots run out!</p>
+    </div>
+
+    <!-- 4 cards in a row (1 per sport) -->
+    <div class="row g-4">
+
+      <!-- Card 1: Cricket -->
+      <div class="col-sm-6 col-lg-3">
+        <div class="event-card card h-100">
+          <img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?w=600&q=80"
+               class="card-img-top" alt="Cricket"/>
+          <div class="card-body">
+            <span class="event-badge">Team Sport</span>
+            <h5 class="card-title mt-2">🏏 Cricket</h5>
+            <p class="card-text text-muted" style="font-size:14px;">
+              20-over knockout tournament. 8 teams battle for the championship trophy.
+            </p>
+          </div>
+          <div class="card-footer bg-white border-top">
+            <div class="card-info"><i class="bi bi-clock me-1"></i> 10:00 AM</div>
+            <div class="card-info mt-1"><i class="bi bi-geo-alt me-1"></i> Main Ground</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2: Badminton -->
+      <div class="col-sm-6 col-lg-3">
+        <div class="event-card card h-100">
+          <img src="https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?w=600&q=80"
+               class="card-img-top" alt="Badminton"/>
+          <div class="card-body">
+            <span class="event-badge">Singles & Doubles</span>
+            <h5 class="card-title mt-2">🏸 Badminton</h5>
+            <p class="card-text text-muted" style="font-size:14px;">
+              Open for all skill levels. Singles and doubles categories available.
+            </p>
+          </div>
+          <div class="card-footer bg-white border-top">
+            <div class="card-info"><i class="bi bi-clock me-1"></i> 2:00 PM</div>
+            <div class="card-info mt-1"><i class="bi bi-geo-alt me-1"></i> Indoor Hall A</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3: Athletics -->
+      <div class="col-sm-6 col-lg-3">
+        <div class="event-card card h-100">
+          <img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=600&q=80"
+               class="card-img-top" alt="Athletics"/>
+          <div class="card-body">
+            <span class="event-badge">Track & Field</span>
+            <h5 class="card-title mt-2">🏃 Athletics</h5>
+            <p class="card-text text-muted" style="font-size:14px;">
+              100m sprint, relay race, and long jump. Show your speed on the track!
+            </p>
+          </div>
+          <div class="card-footer bg-white border-top">
+            <div class="card-info"><i class="bi bi-clock me-1"></i> 12:00 PM</div>
+            <div class="card-info mt-1"><i class="bi bi-geo-alt me-1"></i> Running Track</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4: Table Tennis -->
+      <div class="col-sm-6 col-lg-3">
+        <div class="event-card card h-100">
+          <img src="https://images.unsplash.com/photo-1611251126112-67a9ad031ee6?w=600&q=80"
+               class="card-img-top" alt="Table Tennis"/>
+          <div class="card-body">
+            <span class="event-badge">Individual</span>
+            <h5 class="card-title mt-2">🏓 Table Tennis</h5>
+            <p class="card-text text-muted" style="font-size:14px;">
+              Round-robin then knockout format. 6 tables ready for action.
+            </p>
+          </div>
+          <div class="card-footer bg-white border-top">
+            <div class="card-info"><i class="bi bi-clock me-1"></i> 11:00 AM</div>
+            <div class="card-info mt-1"><i class="bi bi-geo-alt me-1"></i> Indoor Hall B</div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end row -->
+  </div>
+</section>
+<!-- END EVENTS -->
+
+
+<!-- ================================================
+     SECTION 4: SCHEDULE
+     Using Bootstrap Table
+     ================================================ -->
+<section class="schedule-section py-5" id="schedule">
+  <div class="container">
+
+    <!-- Section heading -->
+    <div class="text-center mb-5">
+      <p class="section-label">Plan Your Day</p>
+      <h2>Event Schedule</h2>
+      <div class="section-underline"></div>
+      <p class="text-muted">Full day from 9 AM to 6 PM. Don't miss any event!</p>
+    </div>
+
+    <!-- table-responsive makes it scroll sideways on small screens -->
+    <div class="table-responsive">
+      <table class="table table-bordered table-hover schedule-table text-center align-middle">
+
+        <!-- Table header row -->
+        <thead>
+          <tr>
+            <th>⏰ Time</th>
+            <th>📌 Event</th>
+            <th>📍 Venue</th>
+            <th>ℹ️ Status</th>
+          </tr>
+        </thead>
+
+        <!-- Table data rows -->
+        <tbody>
+          <tr>
+            <td class="time-col">9:00 AM</td>
+            <td>🎉 Opening Ceremony</td>
+            <td>Main Stage</td>
+            <td><span class="badge bg-warning text-dark">Featured</span></td>
+          </tr>
+          <tr>
+            <td class="time-col">10:00 AM</td>
+            <td>🏏 Cricket Match</td>
+            <td>Main Ground</td>
+            <td><span class="badge bg-success">Open</span></td>
+          </tr>
+          <tr>
+            <td class="time-col">11:00 AM</td>
+            <td>🏓 Table Tennis</td>
+            <td>Indoor Hall B</td>
+            <td><span class="badge bg-success">Open</span></td>
+          </tr>
+          <tr>
+            <td class="time-col">12:00 PM</td>
+            <td>🏃 Athletics &amp; Track</td>
+            <td>Running Track</td>
+            <td><span class="badge bg-success">Open</span></td>
+          </tr>
+          <tr class="table-light">
+            <td class="time-col">1:00 PM</td>
+            <td>🍽️ Lunch Break</td>
+            <td>Food Court</td>
+            <td><span class="badge bg-secondary">Break</span></td>
+          </tr>
+          <tr>
+            <td class="time-col">2:00 PM</td>
+            <td>🏸 Badminton Finals</td>
+            <td>Indoor Hall A</td>
+            <td><span class="badge bg-warning text-dark">Featured</span></td>
+          </tr>
+          <tr>
+            <td class="time-col">4:00 PM</td>
+            <td>🏆 Awards Ceremony</td>
+            <td>Main Stage</td>
+            <td><span class="badge bg-warning text-dark">Featured</span></td>
+          </tr>
+          <tr>
+            <td class="time-col">5:30 PM</td>
+            <td>🎊 Closing Celebration</td>
+            <td>Main Ground</td>
+            <td><span class="badge bg-warning text-dark">Featured</span></td>
+          </tr>
+        </tbody>
+
+      </table>
+    </div><!-- end table-responsive -->
+
+  </div>
+</section>
+<!-- END SCHEDULE -->
+
+
+<!-- ================================================
+     SECTION 5: GALLERY
+     Using Bootstrap Grid (row + col)
+     ================================================ -->
+<section class="gallery-section py-5" id="gallery">
+  <div class="container">
+
+    <!-- Section heading -->
+    <div class="text-center mb-5">
+      <p class="section-label">Moments in Sport</p>
+      <h2>Gallery</h2>
+      <div class="section-underline"></div>
+      <p class="text-muted">Highlights from our previous Sports Days.</p>
+    </div>
+
+    <!-- Bootstrap Grid: 2 columns on mobile, 4 columns on desktop -->
+    <div class="row g-3">
+
+      <!-- Image 1 -->
+      <div class="col-6 col-lg-3">
+        <div class="gallery-img-wrap">
+          <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80"
+               alt="Sprint Race"/>
+        </div>
+        <p class="text-center mt-2 text-muted" style="font-size:13px;">🏃 Sprint Race</p>
+      </div>
+
+      <!-- Image 2 -->
+      <div class="col-6 col-lg-3">
+        <div class="gallery-img-wrap">
+          <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=600&q=80"
+               alt="Team Spirit"/>
+        </div>
+        <p class="text-center mt-2 text-muted" style="font-size:13px;">🤝 Team Spirit</p>
+      </div>
+
+      <!-- Image 3 -->
+      <div class="col-6 col-lg-3">
+        <div class="gallery-img-wrap">
+          <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=600&q=80"
+               alt="Celebration"/>
+        </div>
+        <p class="text-center mt-2 text-muted" style="font-size:13px;">🎉 Celebration</p>
+      </div>
+
+      <!-- Image 4 -->
+      <div class="col-6 col-lg-3">
+        <div class="gallery-img-wrap">
+          <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=600&q=80"
+               alt="In Action"/>
+        </div>
+        <p class="text-center mt-2 text-muted" style="font-size:13px;">⚡ In Action</p>
+      </div>
+
+    </div><!-- end row -->
+  </div>
+</section>
+<!-- END GALLERY -->
+
+
+<!-- ================================================
+     SECTION 6: CONTACT
+     Includes contact info + a form
+     ================================================ -->
+<section class="contact-section py-5" id="contact">
+  <div class="container">
+
+    <!-- Section heading -->
+    <div class="text-center mb-5">
+      <p class="section-label">Get In Touch</p>
+      <h2 class="text-white">Register &amp; Contact Us</h2>
+      <div class="section-underline"></div>
+      <p style="color:rgba(255,255,255,0.55);">Fill the form below and we'll get back to you!</p>
+    </div>
+
+    <!-- Two columns: Info (left) + Form (right) -->
+    <div class="row g-5 align-items-start">
+
+      <!-- LEFT COLUMN: Contact Details -->
+      <div class="col-lg-4">
+
+        <div class="contact-item">
+          <div class="contact-icon"><i class="bi bi-geo-alt-fill"></i></div>
+          <div>
+            <h6>Venue</h6>
+            <p>City Sports Complex,<br/>Stadium Road, Delhi</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon"><i class="bi bi-calendar-event-fill"></i></div>
+          <div>
+            <h6>Date</h6>
+            <p>08 April 2026</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon"><i class="bi bi-envelope-fill"></i></div>
+          <div>
+            <h6>Email</h6>
+            <p>info@sportsday2026.in</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon"><i class="bi bi-telephone-fill"></i></div>
+          <div>
+            <h6>Phone</h6>
+            <p>+91 98765 43210</p>
+          </div>
+        </div>
+
+      </div><!-- END left column -->
+
+      <!-- RIGHT COLUMN: Contact Form -->
+      <div class="col-lg-8">
+        <div class="row g-3">
+
+          <!-- Name field -->
+          <div class="col-md-6">
+            <label class="form-label" for="name">Full Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your full name"/>
+          </div>
+
+          <!-- Email field -->
+          <div class="col-md-6">
+            <label class="form-label" for="email">Email Address</label>
+            <input type="email" class="form-control" id="email" placeholder="your@email.com"/>
+          </div>
+
+          <!-- Subject field -->
+          <div class="col-12">
+            <label class="form-label" for="subject">Subject</label>
+            <input type="text" class="form-control" id="subject" placeholder="e.g. Registration Inquiry"/>
+          </div>
+
+          <!-- Message field (textarea allows multiple lines) -->
+          <div class="col-12">
+            <label class="form-label" for="message">Message</label>
+            <textarea class="form-control" id="message" rows="5"
+                      placeholder="Write your message here..."></textarea>
+          </div>
+
+          <!-- Submit button (full width using w-100) -->
+          <div class="col-12">
+            <button type="submit" class="btn btn-warning btn-lg fw-bold w-100">
+              Submit Message &nbsp;→
+            </button>
+          </div>
+
+        </div>
+      </div><!-- END right column (form) -->
+
+    </div><!-- end row -->
+  </div>
+</section>
+<!-- END CONTACT -->
+
+
+<!-- ================================================
+     SECTION 7: FOOTER
+     Includes social media icons and copyright text
+     ================================================ -->
+<footer>
+  <div class="container">
+    <div class="row g-4">
+
+      <!-- Column 1: Brand Name + Social Icons -->
+      <div class="col-lg-4 col-md-6">
+        <div class="footer-logo mb-2">🏆 Sports Day 2026</div>
+        <p style="font-size:14px;">Play Hard. Win Together. Make History.</p>
+
+        <!-- Social media icon links -->
+        <div class="mt-3">
+          <a href="#" class="social-btn" title="Facebook">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="#" class="social-btn" title="Instagram">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="#" class="social-btn" title="Twitter / X">
+            <i class="bi bi-twitter-x"></i>
+          </a>
+          <a href="#" class="social-btn" title="YouTube">
+            <i class="bi bi-youtube"></i>
+          </a>
+          <a href="#" class="social-btn" title="WhatsApp">
+            <i class="bi bi-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Column 2: Quick Links -->
+      <div class="col-lg-2 col-md-6 col-6">
+        <p class="footer-title">Quick Links</p>
+        <nav class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#events">Events</a>
+          <a href="#schedule">Schedule</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+
+      <!-- Column 3: Sports Links -->
+      <div class="col-lg-2 col-md-6 col-6">
+        <p class="footer-title">Sports</p>
+        <nav class="footer-links">
+          <a href="#events">🏏 Cricket</a>
+          <a href="#events">🏸 Badminton</a>
+          <a href="#events">🏃 Athletics</a>
+          <a href="#events">🏓 Table Tennis</a>
+        </nav>
+      </div>
+
+      <!-- Column 4: Event Info -->
+      <div class="col-lg-4 col-md-6">
+        <p class="footer-title">Event Info</p>
+        <p style="font-size:14px;">
+          📅 <strong style="color:#ffc107;">Date:</strong> 08 April 2026<br/>
+          📍 <strong style="color:#ffc107;">Venue:</strong> City Sports Complex, Delhi<br/>
+          📧 <strong style="color:#ffc107;">Email:</strong> info@sportsday2026.in<br/>
+          📞 <strong style="color:#ffc107;">Phone:</strong> +91 98765 43210
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Copyright row at the very bottom -->
+    <div class="footer-bottom">
+      <p class="mb-0">
+        &copy; 2026 Annual Sports Day. All rights reserved. &nbsp;|&nbsp;
+        Built with Bootstrap 5
+      </p>
+    </div>
+
+  </div>
+</footer>
+<!-- END FOOTER -->
+
+
+<!-- Bootstrap JS (needed for the mobile hamburger menu to work) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
